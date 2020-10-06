@@ -4,8 +4,6 @@ project(Hazel VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
-add_definitions(-std=c++2a)
-
 add_subdirectory(Hazel)
 add_subdirectory(Sandbox)
 
