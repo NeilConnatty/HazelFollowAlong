@@ -5,11 +5,13 @@ include(CTest)
 enable_testing()
 
 set(ROOT_DIR ../)
-set(INCLUDE_DIR ${ROOT_DIR}/Hazel/inc/Hazel)
-set(SOURCE_DIR  ${ROOT_DIR}/Hazel/src)
+set(INCLUDE_DIR ${ROOT_DIR}/Hazel/src/Hazel)
+set(SOURCE_DIR  ${ROOT_DIR}/Hazel/src/Hazel)
 
-set(SOURCE_FILES ${SOURCE_DIR}/test.cpp)
-set(HEADER_FILES ${INCLUDE_DIR}/test.h)
+set(SOURCE_FILES ${SOURCE_DIR}/Application.cpp)
+set(HEADER_FILES ${INCLUDE_DIR}/Application.h ${INCLUDE_DIR}/Core.h ${INCLUDE_DIR}/EntryPoint.h)
+
+add_compile_definitions(HAZEL_BUILD_LIB)
 
 add_library(Hazel SHARED ${SOURCE_FILES} ${HEADER_FILES})
 

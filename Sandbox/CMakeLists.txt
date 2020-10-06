@@ -5,11 +5,11 @@ include(CTest)
 enable_testing()
 
 set(ROOT_DIR ../)
-set(HAZEL_INC_DIR ${ROOT_DIR} ${ROOT_DIR}/Hazel/inc)
+set(HAZEL_INC_DIR ${ROOT_DIR} ${ROOT_DIR}/Hazel/src)
 set(SOURCE_DIR ${ROOT_DIR}/Sandbox/src)
 
-set(SOURCE_FILES ${SOURCE_DIR}/application.cpp)
-set(HAZEL_HEADER_FILES ${HAZEL_INC_DIR}/Hazel/test.h)
+set(SOURCE_FILES ${SOURCE_DIR}/SandboxApp.cpp)
+set(HAZEL_HEADER_FILES ${HAZEL_INC_DIR}/Hazel.h)
 
 add_executable(Sandbox ${SOURCE_FILES} ${HAZEL_HEADER_FILES})
 
